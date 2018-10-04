@@ -1,0 +1,59 @@
+{
+    "id": "4ea42dca-aaee-4b0d-9d47-fca859676960",
+    "name": "harish_secret_test",
+    "friendlyName": "Harish Secret Test",
+    "description": "A release task that was created as a test.",
+    "helpMarkDown": "",
+    "category": "Utility",
+    "visibility": [
+        "Release"
+    ],
+    "author": "Harish S/O Balamurugan",
+    "version": {
+        "Major": 0,
+        "Minor": 0,
+        "Patch": 1
+    },
+    "runsOn": [
+        "Agent"
+    ],
+    "instanceNameFormat": "Release Task",
+    "groups": [
+        {
+            "name": "advanced",
+            "displayName": "Advanced",
+            "isExpanded": false
+        },
+        {
+            "name": "extra",
+            "displayName": "Extra Options",
+            "isExpanded": true
+        },
+        {
+            "name": "preapproval",
+            "displayName": "Pre-Approval",
+            "isExpanded": false
+        },
+        {
+            "name": "postapproval",
+            "displayName": "Post-Approval",
+            "isExpanded": false
+        }
+    ],
+    "inputs": [
+        {
+            "name": "password",
+            "type": "string",
+            "label": "Password",
+            "defaultValue": "$(password)",
+            "required": false,
+            "groupName": "extra",
+            "helpMarkDown": "A password. Configure this as a secret variable under the Variables section. Click on the Variables Tab in the menu bar above."
+        }
+    ],
+    "execution": {
+        "Node": {
+            "target": "index.js"
+        }
+    }
+}
